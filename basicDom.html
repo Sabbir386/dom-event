@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basic Dom</title>
+</head>
+<body>
+    <h1 id="deafault-status">default text</h1>
+    <button onclick="handleOnClick()">click me</button>
+    <script>
+    //    document.getElementById('btn-click').addEventListener('click',function(){
+    //     const setText=document.getElementById('deafault-status');
+    //     setText.innerText='i am changed';
+    //    })
+
+    function handleOnClick(){
+        const setText=document.getElementById('deafault-status');
+        setText.innerText='i am changed';
+        document.body.style.backgroundColor='red';
+    }
+    </script>
+</body>
+</html>

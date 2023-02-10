@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disable button</title>
+</head>
+<body>
+    <!-- keypress,keydown,keyup -->
+    <h1 id="secret-info">This is delete Matching and password confirm Matching</h1>
+    <input type="text" id="text-field" placeholder="please type delete">
+    <button id="btn-delete" disabled>click me</button>
+    <script>
+         document.getElementById('text-field').addEventListener('keyup',function(event){
+            const text=event.target.value;
+            const deleteButton=document.getElementById('btn-delete');
+            if(text=='delete'){
+                deleteButton.removeAttribute('disabled');
+            }
+            else{
+                deleteButton.setAttribute('disabled',true);
+            }
+         })
+        document.getElementById('btn-delete').addEventListener('click',function(){
+            const hideText=document.getElementById('secret-info');
+            hideText.style.display='none';
+
+        })
+    </script>
+</body>
+</html>

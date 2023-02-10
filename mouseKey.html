@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disable button</title>
+</head>
+<body>
+    <!-- keypress,keydown,keyup -->
+    <h1>This is delete Matching and password confirm Matching</h1>
+    <input type="text" name="" id="text-field">
+    <button id="btn-more">click me</button>
+    <script>
+        document.getElementById('btn-more').addEventListener('mouseenter',function(){
+            console.log('event trigger');
+        })
+        document.getElementById('btn-more').addEventListener('mousemove',function(){
+            console.log('event trigger');
+        })
+
+
+        document.getElementById('text-field').addEventListener('focus',function(){
+            console.log('event trigger inside the input field');
+        })
+        document.getElementById('text-field').addEventListener('blur',function(){
+            console.log('event trigger outside blur');
+        })
+
+        document.getElementById('text-field').addEventListener('keyup',function(event){
+            console.log(event.target.value);
+        })
+    </script>
+</body>
+</html>
